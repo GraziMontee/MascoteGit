@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="IMG/cursomascote-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <h1 contenteditable="true">BEM VINDO A INFORMÁTICA</h1>
+    <img class="mascote" src="IMG/cursomascote-removebg-preview.png">
+   <div class="container">
+    <div class="bubles">
+        
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:18;"></span>    
+        <span style="--i:21;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:28;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:18;"></span>    
+        <span style="--i:21;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:28;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:26;"></span>
+    </div>
+    <div id="pergnome">
+        <div class="pergnome">
+            <h2 id="h2nome">OLÁ, QUAL SEU NOME?</h2>
+        <input type="text" name="name" id="name" class="name" placeholder="Digite seu nome">
+        <input type="submit" id="enviar" value="enviar">
+       </div>
+       <input type="button" id="proximo" value="proximo" onclick="proximo()">
+       <input type="button" id="proximo1" value="proximo" onclick="proximo()">
+       <button id="btnjogo">  <a href= "https://grazimontee.github.io/Jokenpo/" style="text-decoration: none;"> JOKENPO </a></button>
+       <button id="btnjogo1">  <a href="https://brenno-evangelista.github.io/Jogo-da-velha/" style="text-decoration: none;"> JOGODAVELHA </a></button>
+       <div id="resnome">
+       </div>
+    </div>
+     <div id="pergcurso">
+        <h2 id="h2curso">TEM INTERESSE NO CURSO?</h2>
+        <div id="btns">
+           <input type="button" id="btnsim" class="btn1" value="sim" onclick="sim()">
+           <input type="button" id="btnnao" class="btn2" value="não" onclick="nao()">
+        </div>
+        <div id="res">
+   
+        </div>
+        <div id="pegjogar">
+            <div>
+                <h2 id="h2jogo"> ACEITA JOGAR COMIGO?</h2>
+            </div>
+            <div>
+           <input type="button" id="btnsimj" class="btn1" value="sim" onclick="simjogo()">
+           <input type="button" id="btnnaoj" class="btn2" value="não" onclick="naojogo()">
+           </div>
+           <div id="resjogo"></div>
+
+        </div>
+       </div>
+       <script>
+        //botão pegar o nome//
+        document.getElementById('h2curso').style.display = 'none';
+        document.getElementById('btnsim').style.display = 'none';
+        document.getElementById('btnnao').style.display = 'none';
+        document.getElementById('btnnaoj').style.display = 'none';
+        document.getElementById('btnsimj').style.display = 'none';
+        document.getElementById('h2jogo').style.display = 'none';
+        document.getElementById("btnjogo").style.display = 'none'
+        document.getElementById("btnjogo1").style.display = 'none'
+        document.getElementById("proximo1").style.display = 'none'
+        document.getElementById('proximo').style.display = 'none'
+        document.getElementById('res').style.display = 'none'
+        document.getElementById('resnome').style.display = 'none'
+        document.getElementById('resjogo').style.display = 'none'
+
+        
+        
+        
+        const btn = document.querySelector("#enviar");
+        btn.addEventListener("click", function(e){
+        document.getElementById('proximo').style.display = ''
+        document.getElementById('resnome').style.display = ''
+        
+
+        e.preventDefault();
+        const name = document.querySelector("#name");
+        const value = name.value;
+         console.log(value);
+         var resposta = document.getElementById('resnome').innerHTML = ' Seja bem vindo ' +  value;
+         const sumir = document.getElementById('name').style.display = 'none'
+         const sumirbtn = document.getElementById('enviar').style.display = 'none'
+        });
+        //botão de proximo //
+       const btnpro = document.querySelector("#proximo")
+        btnpro.addEventListener("click", function(proximo){
+        document.getElementById('resnome').style.display = 'none';
+        document.getElementById('h2nome').style.display = 'none';
+        document.getElementById('proximo').style.display = 'none';
+        document.getElementById('proximo1').style.display = 'none';
+        document.getElementById('h2curso').style.display = '';
+        document.getElementById('btnsim').style.display = '';
+        document.getElementById('btnnao').style.display = '';
+        document.getElementById('res').style.display = 'none'
+        
+
+        })
+
+        const btnpro1 = document.getElementById('proximo1')
+        btnpro1.addEventListener("click", function(proximo1){
+        document.getElementById('h2curso').style.display = 'none';
+        document.getElementById('btnsim').style.display = 'none';
+        document.getElementById('btnnao').style.display = 'none';
+        document.getElementById('res').style.display = 'none';
+        document.getElementById('resjogo').style.display = 'none'
+        document.getElementById('proximo1').style.display = 'none';
+        document.getElementById('h2jogo').style.display = '';
+        document.getElementById('btnsimj').style.display = '';
+        document.getElementById('btnnaoj').style.display = '';
+      
+
+        })
+
+        //botão do interesse do curso//
+         function sim(){
+               var resposta = document.getElementById('res')
+               resposta.innerHTML = 'Que legal! Vem ser infor ;)'
+               resposta.style.fontSize = ''
+               resposta.style.textAlign = 'center'
+               resposta.style.color = 'white'
+               document.getElementById('btnsim').style.display = 'none'
+               document.getElementById('btnnao').style.display = 'none'
+               document.getElementById('proximo1').style.display = ''
+               document.getElementById('res').style.display = ''
+           }
+           function nao(){
+            var resposta = document.getElementById('res')
+               resposta.innerHTML = 'Ah, que pena!'
+               resposta.style.fontSize = ''
+               resposta.style.textAlign = 'center'
+               resposta.style.color = 'white'
+               document.getElementById('btnsim').style.display = 'none'
+               document.getElementById('btnnao').style.display = 'none'
+               document.getElementById('proximo1').style.display = ''
+               document.getElementById('res').style.display = ''
+           }
+           //botão pergunta do jogo//
+           function simjogo(){
+               var resposta = document.getElementById('resjogo')
+               resposta.innerHTML = 'Oba! Vamos começar, escolha um jogo'
+               document.getElementById('btnsimj').style.display = 'none'
+               document.getElementById('btnnaoj').style.display = 'none'
+               document.getElementById('h2jogo').style.display = 'none'
+               document.getElementById('btnjogo').style.display = ''
+               document.getElementById("btnjogo1").style.display = ''
+               document.getElementById('resjogo').style.display = ''
+        
+           }
+           function naojogo(){
+            var resposta = document.getElementById('resjogo')
+               resposta.innerHTML = 'Que pena! até a proxima'
+               document.getElementById('btnnaoj').style.display = 'none'
+               document.getElementById('btnsimj').style.display = 'none'
+               document.getElementById('h2jogo').style.display = 'none'
+               document.getElementById('resjogo').style.display = ''
+           }
+           
+       </script>
+   </div>
+</body>
+</html>
